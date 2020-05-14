@@ -65,7 +65,7 @@ const Navbar = () => {
       <li className="nav-item mr-5"><Link to="/" className="nav-link">Home</Link></li>
       <li className="nav-item mr-5"><Link to="/about" className="nav-link">About</Link></li>
       <li className="nav-item mr-5"><Link to="/register" className=" btn btn-outline-light px-4 mb-3">Sign Up</Link></li>
-      <li className="nav-item mr-5"><Link to="/Login" className=" btn px-3 btnSignup">Sign In</Link></li>
+      <li className="nav-item mr-5"><Link to="/login" className=" btn px-3 btnSignup">Sign In</Link></li>
     </Fragment>
   )
 
