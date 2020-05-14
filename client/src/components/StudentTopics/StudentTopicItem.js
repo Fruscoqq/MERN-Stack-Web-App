@@ -2,7 +2,7 @@ import React from 'react';
 
 const StudentTopicItem = ({ currTopic }) => {
 
-  const { _id, studentId, title, topic, feedback, grade } = currTopic;
+  const { studentId, title, topic, feedback, grade } = currTopic;
 
   return (
     <div className="cardParent my-1">

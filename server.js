@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
 })
 
 // Define Routes
+// app.use('/api/home', require('./routes/home'))
 app.use('/api/register', require('./routes/register'))
 app.use('/api/teachers', require('./routes/teachers'))
 app.use('/api/students', require('./routes/students'))

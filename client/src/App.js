@@ -1,13 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Layout/Navbar';
 import Home from './components/Pages/Home';
 import About from './components/Pages/About';
 import Student from './components/Pages/Student';
 import Teacher from './components/Pages/Teacher';
 import Register from './components/Auth/Register';
 import Login from './components/Auth/Login';
-import Alert from './components/Layout/Alert';
 import PrivateRoute from './components/Routing/PrivateRoute';
 import "./css/styles.css"
 
@@ -24,8 +22,6 @@ const App = () => {
           <StudentTopicState>
             <AlertState>
               <Router>
-                {/* <Navbar /> */}
-                {/* <Alert /> */}
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />

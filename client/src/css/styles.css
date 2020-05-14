@@ -7149,12 +7149,20 @@ body {
   overflow-x: hidden;
   background-image: linear-gradient(to right bottom, #2e38b8, #363fba, #3d46bc, #444cbe, #4b53c0); }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+  transition: background-color 5000s ease-in-out 0s; }
+
 img {
   width: 100%; }
-
-.wrapper {
-  max-width: 1100px;
-  margin: 0 auto; }
 
 nav {
   transition: .3s all ease-in; }
@@ -7302,10 +7310,6 @@ nav {
   border: none;
   border-radius: 16px; }
 
-.studentForm .btn, .register .btn, .login .btn {
-  color: #fff;
-  background: #EB4A36 !important; }
-
 .cardParent:nth-child(odd) .card {
   background: #EAEEF2;
   border-radius: 16px; }
@@ -7351,11 +7355,13 @@ nav {
   background: #F9A826;
   border-radius: 16px; }
 
+.register input, .login input {
+  background: #4148b6;
+  box-shadow: none !important;
+  color: #F4F5FA; }
+
 .register h2, .login h2 {
   color: #F9A826; }
-
-.register span, .login span {
-  color: #EB4A36; }
 
 .register .registerCard, .login .registerCard {
   background: #4b53c0;
@@ -7378,7 +7384,7 @@ nav {
   .loginCard .btn {
     border-radius: 16px; }
   .loginCard img {
-    width: 50%; }
+    width: 60%; }
 
 .icon-bar {
   width: 22px;

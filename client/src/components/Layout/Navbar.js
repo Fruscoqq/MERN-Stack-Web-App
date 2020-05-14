@@ -64,8 +64,8 @@ const Navbar = () => {
     <Fragment>
       <li className="nav-item mr-5"><Link to="/" className="nav-link">Home</Link></li>
       <li className="nav-item mr-5"><Link to="/about" className="nav-link">About</Link></li>
-      <li className="nav-item mr-5"><Link to="/register" className="nav-link btn btn-outline-light px-4">Sign Up</Link></li>
-      <li className="nav-item mr-5"><Link to="/Login" className="nav-link btn px-3 btnSignup">Sign In</Link></li>
+      <li className="nav-item mr-5"><Link to="/register" className=" btn btn-outline-light px-4 mb-3">Sign Up</Link></li>
+      <li className="nav-item mr-5"><Link to="/Login" className=" btn px-3 btnSignup">Sign In</Link></li>
     </Fragment>
   )
 
@@ -98,7 +98,7 @@ const Navbar = () => {
         </div>
       </nav>)
         :
-        (<Headroom><nav className="navbar navbar-expand-md navbar-light bg-primary font-weight-bold">
+        (<Headroom><nav className="navbar navbar-expand-md navbar-danger bg-danger font-weight-bold">
           <Link className="navbar-brand ml-5 brand my-3" to="/">
             <img src={logo} alt="" style={{ width: '80px' }} />
             {' '}IdeasHub
@@ -109,7 +109,7 @@ const Navbar = () => {
             <span class="icon-bar bottom-bar bg-dark"></span>
           </button>
           <div className="collapse navbar-collapse navGrid2" id="navbarNav">
-            <ul className="navbar-nav ml-auto text-light my-3">
+            <ul className="navbar-nav ml-auto text-dark my-3">
               {isRole}
             </ul>
           </div>

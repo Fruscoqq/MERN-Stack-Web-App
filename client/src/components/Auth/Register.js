@@ -3,6 +3,7 @@ import AlertContext from '../../context/Alert/alertContext';
 import AuthContext from '../../context/AuthContext/authContext';
 import Alert from '../Layout/Alert';
 import Footer from '../Layout/Footer';
+import Navbar from '../Layout/Navbar';
 import regPic from '../../images/regPic.svg';
 
 const Register = (props) => {
@@ -24,9 +25,6 @@ const Register = (props) => {
       props.history.push('/login')
     }
 
-    if (authContext.error !== null) {
-      alertContext.setAlert('danger', authContext.error)
-    }
     authContext.clearErrors();
   }, [authContext.error, authContext.isAuthenticated, props.history])
 
@@ -57,12 +55,14 @@ const Register = (props) => {
 
   return (
     <div className='register'>
-      <div className="container py-5" style={{ width: '900px' }}>
+      <Navbar />
+      <div className="container py-5" style={{ maxWidth: '900px' }} >
         <Alert />
         <h2 className="text-center py-5 font-weight-bold">Account <span className="text-primary">Register</span></h2>
-        <div className="row registerCard">
-          <div className="col-md-6">
-            <form className="form-group" onSubmit={onSubmit}>
+        <div className="row registerCard m-2">
+          <div className="col-sm-6">
+            <h3 className="text-center text-light py-3">Type In Your Details</h3>
+            <form className="form-group" autoComplete="off" onSubmit={onSubmit}>
 
               <input type="text" className="form-control my-3" name='studentId' value={studentId} placeholder="Student ID" onChange={onChange} />
 
@@ -75,16 +75,16 @@ const Register = (props) => {
               <input type="password" className="form-control mb-3" name='password2' value={password2} placeholder="Confirm Password" onChange={onChange} />
 
 
-              <label>Role</label>
-              <select class="custom-select mb-3" name="role" value={role} onChange={onChange}>
+              <p className="text-light">Role</p>
+              <select class="custom-select mb-3 rounded-pill" name="role" value={role} onChange={onChange}>
                 <option disabled>Choose...</option>
                 <option value="Student">Student</option>
                 <option value="Teacher">Teacher</option>
               </select>
-              <button type="submit" className="btn btn-block text-uppercase font-weight-bold">Register Now</button>
+              <button type="submit" className="btn btn-block btn-secondary text-primary">Register Now</button>
             </form>
           </div>
-          <div className="col-md-6 d-none d-md-block align-self-center">
+          <div className="col-sm-6 d-none d-sm-block align-self-center">
             <img src={regPic} alt="reg image" />
           </div>
         </div>

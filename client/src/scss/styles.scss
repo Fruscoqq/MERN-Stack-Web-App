@@ -4,7 +4,7 @@ $theme-colors: (
   "danger": #EB4A36
 );
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import "./_footer.scss";
 
@@ -19,13 +19,23 @@ body {
   background-image: linear-gradient(to right bottom, #2e38b8, #363fba, #3d46bc, #444cbe, #4b53c0);
 }
 
-img {
-  width: 100%;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
-.wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
+img {
+  width: 100%;
 }
 
 nav {
@@ -55,7 +65,7 @@ nav {
   
 }
 
-
+// Home
 #home {
   
   .earth {
@@ -101,7 +111,7 @@ svg {
   background-image: rgb(51, 0, 255);
 }
 }
-
+// Why Choose Us
 #why-choose-us {
   background: #F4F5FA;
   .box1 {
@@ -133,7 +143,7 @@ svg {
         }
       }
 }
-
+// What It Does
 #what-it-does {
   background: #fff;
 }
@@ -145,7 +155,7 @@ svg {
     width: 60%;
   }
 }
-
+// Contact Us
 .contact-us {
   background: rgb(255, 255, 255);
   
@@ -235,10 +245,6 @@ button {
     border:none;
     border-radius: 16px;
   }
-  .btn {
-    color: #fff;
-    background: $primary-color;
-  }
 }
 
 // Student Card Parent
@@ -304,11 +310,21 @@ button {
 
 // Register
 .register, .login{
+  input {
+    background: rgb(65, 72, 182);
+    box-shadow: none !important;
+    color: #F4F5FA;
+    
+    // &::placeholder{
+    //   color: rgba(244, 245, 250, 0.555);
+    // }
+  }
+  
+  // .form-control {
+  //   background: transparent;
+  // }
   h2{
     color: #F9A826;
-  }
-  span{
-    color: #EB4A36;
   }
   .registerCard {
     background: #4b53c0;
@@ -341,7 +357,7 @@ button {
   }
 
   img {
-    width: 50%;
+    width: 60%;
   }
 }
 
