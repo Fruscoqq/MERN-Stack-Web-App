@@ -21,9 +21,9 @@ const Register = (props) => {
   const authContext = useContext(AuthContext);
 
   useEffect(() => {
-    // if (authContext.isAuthenticated) {
-    //   props.history.push('/login')
-    // }
+    if (authContext.isAuthenticated) {
+      props.history.push('/login')
+    }
 
     authContext.clearErrors();
   }, [authContext.error, authContext.isAuthenticated, props.history])
